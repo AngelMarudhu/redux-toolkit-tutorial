@@ -139,12 +139,12 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className='nav-center'>
+      <div className="nav-center">
         <h3>redux toolkit</h3>
-        <div className='nav-container'>
+        <div className="nav-container">
           <CartIcon />
-          <div className='amount-container'>
-            <p className='total-amount'>{amount}</p>
+          <div className="amount-container">
+            <p className="total-amount">{amount}</p>
           </div>
         </div>
       </div>
@@ -193,17 +193,17 @@ const CartContainer = () => {
 
   if (amount < 1) {
     return (
-      <section className='cart'>
+      <section className="cart">
         {/* cart header */}
         <header>
           <h2>your bag</h2>
-          <h4 className='empty-cart'>is currently empty</h4>
+          <h4 className="empty-cart">is currently empty</h4>
         </header>
       </section>
     );
   }
   return (
-    <section className='cart'>
+    <section className="cart">
       {/* cart header */}
       <header>
         <h2>your bag</h2>
@@ -217,12 +217,12 @@ const CartContainer = () => {
       {/* cart footer */}
       <footer>
         <hr />
-        <div className='cart-total'>
+        <div className="cart-total">
           <h4>
             total <span>${total}</span>
           </h4>
         </div>
-        <button className='btn clear-btn'>clear cart</button>
+        <button className="btn clear-btn">clear cart</button>
       </footer>
     </section>
   );
@@ -239,23 +239,23 @@ import { ChevronDown, ChevronUp } from '../icons';
 
 const CartItem = ({ id, img, title, price, amount }) => {
   return (
-    <article className='cart-item'>
+    <article className="cart-item">
       <img src={img} alt={title} />
       <div>
         <h4>{title}</h4>
-        <h4 className='item-price'>${price}</h4>
+        <h4 className="item-price">${price}</h4>
         {/* remove button */}
-        <button className='remove-btn'>remove</button>
+        <button className="remove-btn">remove</button>
       </div>
       <div>
         {/* increase amount */}
-        <button className='amount-btn'>
+        <button className="amount-btn">
           <ChevronUp />
         </button>
         {/* amount */}
-        <p className='amount'>{amount}</p>
+        <p className="amount">{amount}</p>
         {/* decrease amount */}
-        <button className='amount-btn'>
+        <button className="amount-btn">
           <ChevronDown />
         </button>
       </div>
@@ -307,7 +307,7 @@ const CartContainer = () => {
 
   return (
     <button
-      className='btn clear-btn'
+      className="btn clear-btn"
       onClick={() => {
         dispatch(clearCart());
       }}
@@ -386,14 +386,14 @@ const CartItem = ({ id, img, title, price, amount }) => {
   const dispatch = useDispatch();
 
   return (
-    <article className='cart-item'>
+    <article className="cart-item">
       <img src={img} alt={title} />
       <div>
         <h4>{title}</h4>
-        <h4 className='item-price'>${price}</h4>
+        <h4 className="item-price">${price}</h4>
         {/* remove button */}
         <button
-          className='remove-btn'
+          className="remove-btn"
           onClick={() => {
             dispatch(removeItem(id));
           }}
@@ -404,7 +404,7 @@ const CartItem = ({ id, img, title, price, amount }) => {
       <div>
         {/* increase amount */}
         <button
-          className='amount-btn'
+          className="amount-btn"
           onClick={() => {
             dispatch(increase({ id }));
           }}
@@ -412,10 +412,10 @@ const CartItem = ({ id, img, title, price, amount }) => {
           <ChevronUp />
         </button>
         {/* amount */}
-        <p className='amount'>{amount}</p>
+        <p className="amount">{amount}</p>
         {/* decrease amount */}
         <button
-          className='amount-btn'
+          className="amount-btn"
           onClick={() => {
             if (amount === 1) {
               dispatch(removeItem(id));
@@ -468,14 +468,14 @@ export default App;
 ```js
 const Modal = () => {
   return (
-    <aside className='modal-container'>
-      <div className='modal'>
+    <aside className="modal-container">
+      <div className="modal">
         <h4>Remove all items from your shopping cart?</h4>
-        <div className='btn-container'>
-          <button type='button' className='btn confirm-btn'>
+        <div className="btn-container">
+          <button type="button" className="btn confirm-btn">
             confirm
           </button>
-          <button type='button' className='btn clear-btn'>
+          <button type="button" className="btn clear-btn">
             cancel
           </button>
         </div>
@@ -548,7 +548,7 @@ import { openModal } from '../features/modal/modalSlice';
 
 return (
   <button
-    className='btn clear-btn'
+    className="btn clear-btn"
     onClick={() => {
       dispatch(openModal());
     }}
@@ -569,13 +569,13 @@ const Modal = () => {
   const dispatch = useDispatch();
 
   return (
-    <aside className='modal-container'>
-      <div className='modal'>
+    <aside className="modal-container">
+      <div className="modal">
         <h4>Remove all items from your shopping cart?</h4>
-        <div className='btn-container'>
+        <div className="btn-container">
           <button
-            type='button'
-            className='btn confirm-btn'
+            type="button"
+            className="btn confirm-btn"
             onClick={() => {
               dispatch(clearCart());
               dispatch(closeModal());
@@ -584,8 +584,8 @@ const Modal = () => {
             confirm
           </button>
           <button
-            type='button'
-            className='btn clear-btn'
+            type="button"
+            className="btn clear-btn"
             onClick={() => {
               dispatch(closeModal());
             }}
@@ -654,7 +654,7 @@ function App() {
 
   if (isLoading) {
     return (
-      <div className='loading'>
+      <div className="loading">
         <h1>Loading...</h1>
       </div>
     );

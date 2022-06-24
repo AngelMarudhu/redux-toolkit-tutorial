@@ -5,7 +5,7 @@ Variables
 */
 
 :root {
-  --clr-primary: #645cff;
+  --clr-primary: #cb5cff;
   --clr-primary-dark: #282566;
   --clr-primary-light: #a29dff;
   --clr-grey-1: #102a42;
@@ -19,7 +19,7 @@ Variables
   --radius: 0.25rem;
   --large-screen-width: 1170px;
   --small-screen-width: 90vw;
-  --fixed-width: 50rem;
+  --fixed-width: 70rem;
 }
 * {
   margin: 0;
@@ -179,7 +179,7 @@ Cart
   margin-bottom: 3rem;
 }
 .empty-cart {
-  text-transform: lowercase;
+  text-transform: capitalize;
   color: var(--clr-grey-5);
   margin-top: 1rem;
   text-align: center;
@@ -224,6 +224,7 @@ Cart Item
   grid-column-gap: 1.5rem;
   margin: 1.5rem 0;
 }
+
 .cart-item img {
   width: 5rem;
   height: 5rem;
@@ -242,7 +243,13 @@ Cart Item
   letter-spacing: var(--spacing);
   cursor: pointer;
   font-size: 0.85rem;
-  background: transparent;
+  background: red;
+  padding: 5px;
+  border-radius: 20px;
+  color: white;
+  margin: auto;
+  max-width: 100%;
+  width: 100px;
   border: none;
   margin-top: 0.375rem;
   transition: var(--transition);
